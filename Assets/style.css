@@ -1,21 +1,30 @@
+/* Universal Styles */
+
+
+h1{
+    font-weight: bold;
+    font-size: 3em;
+}
+
+h2{
+    font-size: 3em;
+}
+
 
 header{
     border: solid 2px red;
 }
 
-@media (min-width: 600px) {
-    main{
-        margin: 3em 7em;
-    }
-}
 
 .introduction{
     display: flex;
+    flex-wrap: wrap;
     padding:3em;
     justify-content: space-between;
 }
 
 nav{
+    font-size: 1.5em;
     width: 50%;
     border: solid 2px black;
 }
@@ -24,8 +33,11 @@ nav ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    margin: 1em;
 }
 
 .hero{
@@ -35,7 +47,7 @@ nav ul{
     flex-direction: row;
     justify-content: space-around;
 }
-.hero h2{
+.subtitle{
     align-self: flex-end;
 }
 
@@ -43,15 +55,23 @@ nav ul{
     margin: 2em;
 }
 
+
+/* containers universal styles */
+
+@media (min-width: 700px) {
+    .container{
+        margin: 3em 10em;
+    }
+}
+
 .container-title{
     text-align: right;
     border: red 2px solid;
-    font-size: 30px;
     padding-left: 2em;
 }
 
 .container{
-    gap: 3%;
+    gap: 3em;
     display: flex;
     border: solid 2px  #16a6e9;
     margin-top: 3em;
@@ -60,54 +80,55 @@ nav ul{
 
 .content{
     border: solid 2px #26ff00;
-    width: 100%;
 }
-
-/* About Me section */
 
 
 /* Work Section */
 
-@media (min-width: 500px){
+ @media (min-width: 350px){
     .Work.container .content{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 2em;
     }
-}  
 
-/* .Work.container .content{
-    display: flex;
-    flex-wrap: wrap;
-} */
+    #featured.card{
+        grid-column: span 2;
+    }
+} 
+
 
 /* CARDS */
 
 
 .card-title{
     background-color: #ff0000;
-    position: absolute;
     align-self: flex-end;
-}
-
-/* #featured.card{
-    grid-column: span 2;
-    width: 100%;
-} */
-
-.featured{
-    display: grid;
+    margin-bottom: 2em;
 }
 
 .card{
-    border: solid #ff0000;
     display: flex;
-    width: 100%;
+    border: .35em solid red;
+    background-image: url(./Images/flower\ placheholder.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    aspect-ratio: 2/1;
 }
 
-.card img{
+
+/* Footer Section */
+
+#Footer .content{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: auto;
-    aspect-ratio: 2/1;
-    object-fit: cover;
+    justify-content: space-evenly;
+    align-content: center;
 }
- 
+
+#Footer .container-title{
+    padding-left: 0;
+}
+
