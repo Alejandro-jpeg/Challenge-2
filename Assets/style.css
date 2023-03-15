@@ -1,0 +1,113 @@
+
+header{
+    border: solid 2px red;
+}
+
+@media (min-width: 600px) {
+    main{
+        margin: 3em 7em;
+    }
+}
+
+.introduction{
+    display: flex;
+    padding:3em;
+    justify-content: space-between;
+}
+
+nav{
+    width: 50%;
+    border: solid 2px black;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.hero{
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.hero h2{
+    align-self: flex-end;
+}
+
+.profile-img{
+    margin: 2em;
+}
+
+.container-title{
+    text-align: right;
+    border: red 2px solid;
+    font-size: 30px;
+    padding-left: 2em;
+}
+
+.container{
+    gap: 3%;
+    display: flex;
+    border: solid 2px  #16a6e9;
+    margin-top: 3em;
+}
+
+
+.content{
+    border: solid 2px #26ff00;
+    width: 100%;
+}
+
+/* About Me section */
+
+
+/* Work Section */
+
+@media (min-width: 500px){
+    .Work.container .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}  
+
+/* .Work.container .content{
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* CARDS */
+
+
+.card-title{
+    background-color: #ff0000;
+    position: absolute;
+    align-self: flex-end;
+}
+
+/* #featured.card{
+    grid-column: span 2;
+    width: 100%;
+} */
+
+.featured{
+    display: grid;
+}
+
+.card{
+    border: solid #ff0000;
+    display: flex;
+    width: 100%;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+}
+ 
